@@ -5,6 +5,7 @@
   padding: 20px;
   margin: 50px auto;
   background-color: antiquewhite;
+  margin-bottom: 0;
 }
 h1 {
   text-align: center;
@@ -21,4 +22,10 @@ ul {
 }
 .card {
   text-align: center;
+}
+.footer {
+  margin: 10px;
+}
+.link {
+  text-decoration: none;
 }
