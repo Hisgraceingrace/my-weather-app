@@ -1,0 +1,24 @@
+.weather-app {
+  border: 1px solid;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px auto;
+  background-color: antiquewhite;
+}
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+h5 {
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+.card {
+  text-align: center;
+}
