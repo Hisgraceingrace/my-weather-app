@@ -35,16 +35,21 @@ currentDate.innerHTML = `${day} ${date} ${month} ${year} ${hour}:${minute}`;
 function showTemperature(response) {
   console.log(response);
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `Wind: ${response.data.wind.speed}m/s`;
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}m/s`;
   let description = document.querySelector("#description");
   description.innerHTML = `${response.data.weather[0].description}`;
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function search(event) {
   event.preventDefault();
