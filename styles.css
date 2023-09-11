@@ -24,8 +24,8 @@ ul {
   text-align: center;
 }
 .footer {
-  margin-top: 10px;
-  margin-left: 100px;
+  display: block;
+  margin: 10px 320px;
 }
 .link {
   text-decoration: none;
