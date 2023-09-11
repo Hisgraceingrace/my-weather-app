@@ -1,6 +1,9 @@
+.weather-app-wrapper {
+  max-width: 500px;
+}
 .weather-app {
   border: 1px solid;
-  max-width: 500px;
+
   border-radius: 10px;
   padding: 20px;
   margin: 50px auto;
@@ -17,16 +20,33 @@ h5 {
 .description {
   text-align: center;
 }
+img {
+  height: 64px;
+  width: 64px;
+  margin-bottom: 27px;
+}
+
+.temp {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 400;
+}
+small {
+  position: relative;
+  top: -26px;
+
+  font-weight: 600;
+}
+.unit {
+  text-decoration: none;
+}
 ul {
   list-style: none;
 }
 .card {
   text-align: center;
 }
-.footer {
-  display: block;
-  margin: 10px 320px;
-}
+
 .link {
   text-decoration: none;
 }

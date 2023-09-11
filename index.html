@@ -15,77 +15,85 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form id="inputCity">
-          <input
-            type="text"
-            placeholder="Enter a city"
-            autocomplete="on"
-            id="cityName"
-          />
-          <input
-            type="submit"
-            value="search"
-            class="btn btn-primary"
-            id="search"
-          />
-          <input
-            type="button"
-            value="current"
-            class="btn btn-success"
-            id="location"
-          />
-        </form>
-        <h1 id="city">Lagos</h1>
-        <h5 id="date">Sat/2/Sep/2023/23:35</h5>
-        <p class="description" id="description">
-          <strong>Partly Cloudy</strong>
-        </p>
-        <div class="row">
-          <div class="col"><h1 id="temperature">⛅ 33°C|°F</h1></div>
-          <div class="col">
-            <ul>
-              <li id="humidity">Humidity: 23%</li>
-              <li id="wind">Wind: 34km/h</li>
-            </ul>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="inputCity">
+            <input
+              type="text"
+              placeholder="Enter a city"
+              autocomplete="on"
+              id="cityName"
+            />
+            <input
+              type="submit"
+              value="search"
+              class="btn btn-primary"
+              id="search"
+            />
+            <input
+              type="button"
+              value="current"
+              class="btn btn-success"
+              id="location"
+            />
+          </form>
+          <h1 id="city">Lagos</h1>
+          <h5 id="date">Sat/2/Sep/2023/23:35</h5>
+          <p class="description" id="description">
+            <strong>Partly Cloudy</strong>
+          </p>
+          <div class="row">
+            <div class="col" id="temperature">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="weather-icon"
+              /><strong class="temp">33</strong
+              ><small>°C |<a href="#" class="unit">°F</a></small>
+            </div>
+            <div class="col">
+              <ul>
+                <li id="humidity">Humidity: 23%</li>
+                <li id="wind">Wind: 34km/h</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-group">
+            <div class="card">
+              <h3>Thu</h3>
+              <p>🌦️</p>
+              <p>30°</p>
+            </div>
+            <div class="card">
+              <h3>Fri</h3>
+              <p>⛈️</p>
+              <p>24°</p>
+            </div>
+            <div class="card">
+              <h3>Sat</h3>
+              <p>🌩️</p>
+              <p>20°</p>
+            </div>
+            <div class="card">
+              <h3>Sun</h3>
+              <p>🌧️</p>
+              <p>35°</p>
+            </div>
+            <div class="card">
+              <h3>Mon</h3>
+              <p>⛅</p>
+              <p>37°</p>
+            </div>
           </div>
         </div>
-        <div class="card-group">
-          <div class="card">
-            <h3>Thu</h3>
-            <p>🌦️</p>
-            <p>30°</p>
-          </div>
-          <div class="card">
-            <h3>Fri</h3>
-            <p>⛈️</p>
-            <p>24°</p>
-          </div>
-          <div class="card">
-            <h3>Sat</h3>
-            <p>🌩️</p>
-            <p>20°</p>
-          </div>
-          <div class="card">
-            <h3>Sun</h3>
-            <p>🌧️</p>
-            <p>35°</p>
-          </div>
-          <div class="card">
-            <h3>Mon</h3>
-            <p>⛅</p>
-            <p>37°</p>
-          </div>
-        </div>
+        <footer class="footer">
+          <a
+            href="https://github.com/Hisgraceingrace/my-weather-app.git"
+            target="_blank"
+            class="link"
+            >Open-source code</a
+          >, by Onyebueke Ogechukwu
+        </footer>
       </div>
-      <footer class="footer">
-        <a
-          href="https://github.com/Hisgraceingrace/my-weather-app.git"
-          target="_blank"
-          class="link"
-          >Open-source code</a
-        >, by Onyebueke Ogechukwu
-      </footer>
     </div>
     <script src="index.js"></script>
   </body>
