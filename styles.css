@@ -40,6 +40,12 @@ small {
 .unit {
   text-decoration: none;
 }
+.active {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
 ul {
   list-style: none;
 }

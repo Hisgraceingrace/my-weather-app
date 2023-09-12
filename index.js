@@ -35,7 +35,9 @@ currentDate.innerHTML = `${day} ${date} ${month} ${year} ${hour}:${minute}`;
 function showTemperature(response) {
   console.log(response);
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
+
+  celsusTemperature = response.data.main.temp;
+  temperature.innerHTML = `${Math.round(celsusTemperature)}`;
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -84,3 +86,27 @@ function getCurrentLocation(event) {
 }
 let currentPosition = document.querySelector("#location");
 currentPosition.addEventListener("click", getCurrentLocation);
+
+function celsus(event) {
+  event.preventDefault();
+  tempInCelsus.classList.add("active");
+  tempInFahrenheit.classList.remove("active");
+  let temp = document.querySelector("#temperature");
+  let temperature = temp.innerHTML;
+  temp.innerHTML = Math.round(celsusTemperature);
+}
+function fahrenheit(event) {
+  event.preventDefault();
+  tempInCelsus.classList.remove("active");
+  tempInFahrenheit.classList.add("active");
+  let temp = document.querySelector("#temperature");
+  let temperature = celsusTemperature;
+  temp.innerHTML = Math.round((temperature * 9) / 5 + 32);
+}
+
+let celsusTemperature = null;
+
+let tempInCelsus = document.querySelector("#celsus");
+let tempInFahrenheit = document.querySelector("#fahrenheit");
+tempInCelsus.addEventListener("click", celsus);
+tempInFahrenheit.addEventListener("click", fahrenheit);
