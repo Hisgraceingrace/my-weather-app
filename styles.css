@@ -1,5 +1,7 @@
 .weather-app-wrapper {
   max-width: 500px;
+  display: block;
+  margin: 0 auto;
 }
 .weather-app {
   border: 1px solid;
@@ -55,4 +57,8 @@ ul {
 
 .link {
   text-decoration: none;
+}
+.weather-condition {
+  display: block;
+  margin: 0 10px;
 }
