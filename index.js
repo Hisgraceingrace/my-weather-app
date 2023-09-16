@@ -34,8 +34,8 @@ currentDate.innerHTML = `${day} ${date} ${month} ${year} ${hour}:${minute}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let day = date.getDate();
-  let days = ["Sun", "Mon", "Tue", "Wed"];
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
 
@@ -46,9 +46,7 @@ function displayForecast(response) {
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
-      forecastHTML =
-        forecastHTML +
-        `<div class="card">
+      forecastHTML += `<div class="card">
       <h3>${formatDay(forecastDay.dt)}</h3>
   
       <img
