@@ -21,6 +21,7 @@ h5 {
 }
 .description {
   text-align: center;
+  text-transform: capitalize;
 }
 img {
   height: 64px;
